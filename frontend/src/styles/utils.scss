@@ -1,0 +1,179 @@
+@import "variables";
+@import "mixins/breakpoints.mixins";
+
+.font {
+  &--heading {
+    font-size: $font-lg;
+    line-height: $font-lg-line;
+    font-weight: 900;
+    font-family: 'raleway-black', sans-serif;
+  }
+  &--large {
+    font-size: $font-lg;
+    line-height: $font-lg-line;
+  }
+  &--regular {
+    font-size: $font-regular;
+    line-height: $font-regular-line;
+    font-weight: 700;
+  }
+  &--sm {
+    font-size: $font-sm;
+    line-height: $font-sm-line;
+  }
+  &--bold {
+    font-weight: 900;
+  }
+  &--spaced {
+    letter-spacing: 1px;
+  }
+  &--light {
+    font-weight: 500;
+  }
+  &__align--right {
+    text-align: right;
+  }
+  &__align--left {
+    text-align: left;
+  }
+  &__align--center {
+    text-align: center;
+  }
+  &__align--justify {
+    text-align: justify;
+  }
+}
+
+.color {
+  &--primary {
+    color: $primary;
+  }
+  &--primary-dark {
+    color: $primary-dark;
+  }
+  &--secondary {
+    color: $secondary;
+  }
+  &--accent {
+    color: $accent;
+  }
+  &--white {
+    color: white;
+  }
+  &--error {
+    color: $error;
+  }
+  &--warning {
+    color: $warning;
+  }
+  &--info {
+    color: $info;
+  }
+  &--success {
+    color: $success;
+  }
+  &--success-ligth {
+    color: $success-light;
+  }
+  &--dark {
+    color: $text-color;
+  }
+}
+
+.white-space {
+  &__no-wrap {
+    white-space: nowrap;
+  }
+}
+
+.border {
+  &--top {
+    border-top: $border;
+  }
+  &--left {
+    border-left: $border;
+  }
+  &--right {
+    border-right: $border;
+  }
+  &--bottom {
+    border-bottom: $border;
+  }
+  &--all {
+    border: $border;
+  }
+}
+
+.tag {
+
+  padding: 2px 8px;
+  border-radius: 16px;
+  font-size: $font-sm;
+  &--primary {
+    background: $primary;
+    color: white;
+  }
+  &--primary-light {
+    background: $primary-light;
+  }
+  &--secondary {
+    background: $secondary;
+  }
+  &--accent {
+    background: $accent;
+  }
+  &--error {
+    background: $error;
+  }
+  &--warning {
+    background: $warning;
+  }
+  &--info {
+    background: $info;
+  }
+  &--success {
+    background: $success;
+  }
+  &--success-ligth {
+    background: $success-light;
+  }
+  &--dark {
+    background: $text-color;
+    color: white;
+  }
+}
+
+.grid {
+  &-row-1 {
+    grid-row: 1;
+  }
+  &-row-2 {
+    grid-row: 2;
+  }
+  &-row-3 {
+    grid-row: 3;
+  }
+  &-row-4 {
+    grid-row: 4;
+  }
+  &-row-5 {
+    grid-row: 5;
+  }
+
+  &-column-1 {
+    grid-column: 1;
+  }
+  &-column-2 {
+    grid-column: 2;
+  }
+  &-column-3 {
+    grid-column: 3;
+  }
+  &-column-4 {
+    grid-column: 4;
+  }
+  &-column-5 {
+    grid-column: 5;
+  }
+
+}

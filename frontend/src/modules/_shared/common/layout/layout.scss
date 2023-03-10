@@ -1,0 +1,140 @@
+@import "@/styles/mixins/breakpoints.mixins";
+@import "@/styles/variables";
+
+.admin-page {
+  display: flex;
+}
+
+.main-view {
+  padding: $theme-unit * 2;
+
+  @include respond-to("small") {
+    padding: $theme-unit * 4;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: $theme-unit * 6;
+
+    &--logo {
+      height: 65px;
+      width: auto;
+      cursor: pointer;
+    }
+  }
+
+  &__wallet {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    max-width: 50%;
+
+    &--address {
+      display: flex;
+      justify-items: flex-end;
+      align-items: center;
+      transition: all 350ms ease-in-out;
+
+      &-hider {
+        width: 65px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+      }
+
+      &:hover {
+        flex-grow: 2;
+        color: $primary;
+        text-decoration: underline;
+        cursor: pointer;
+
+        .main-view__wallet--address-hider {
+          width: 100%;
+        }
+        .main-view__wallet--address-ellipsis {
+          width: 0;
+          overflow: hidden;
+        }
+      }
+    }
+
+    &--disconnect {
+      opacity: 0.5;
+      transition: opacity 300ms;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &--connect {
+      font-size: $font-sm;
+    }
+  }
+
+  &__network {
+    &--info {
+      margin-top: 15px;
+      font-size: $font-regular-line;
+      font-weight: 400;
+    }
+  }
+
+  &__nav {
+    display: none;
+    @include respond-to("medium") {
+      display: block;
+    }
+
+    &--phone {
+      @include respond-to("medium") {
+        display: none;
+      }
+    }
+  }
+
+  &.navigation--desktop {
+    @include respond-to("medium") {
+      display: grid;
+      grid-template-rows: min-content auto;
+      grid-template-columns: auto;
+    }
+  }
+
+  &__content {
+    &.navigation-admin {
+      display: grid;
+      grid-template-rows: min-content auto;
+      grid-template-columns: 160px auto;
+    }
+  }
+
+  &__admin-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__item {
+      text-align: left;
+      text-decoration: none;
+      font-size: $font-md;
+      margin: $theme-unit 0;
+      color: $primary-light;
+      border-radius: 100px;
+      padding: $theme-unit * 1.2 $theme-unit * 2;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &.router-link-active,
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}

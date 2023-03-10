@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixins/breakpoints.mixins";
+
+@keyframes opaqueBackdropTransition {
+  0% {
+    background-color: rgba(0, 0, 0, 0.0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes slideOutTop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInTopBounce {
+  0% {
+    transform: translateY(-50%) scaleY(3);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY($panel-gap) scaleY(0.9);
+  }
+
+  75% {
+    transform: translateY(-10px) scaleY(0.95);
+  }
+
+  90% {
+    transform: translateY(5px) scaleY(0.985);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes borderFade {
+  0% {
+    border-top: 1px solid transparent;
+  }
+  100% {
+    border-top: $border;
+  }
+}
+
+.animated {
+  &__fadeInTop {
+    animation: fadeInTop .3s ease-in-out 0s 1 forwards;
+    -webkit-animation: fadeInTop .3s ease-in-out 0s 1 forwards;
+    -moz-animation: fadeInTop .3s ease-in-out 0s 1 forwards;
+  }
+
+  &__slow {
+    animation-duration: 1s;
+  }
+
+  &__medium {
+    animation-duration: .5s;
+  }
+
+  &__fast {
+    animation-duration: .1s;
+  }
+}

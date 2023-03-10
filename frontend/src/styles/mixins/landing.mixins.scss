@@ -1,0 +1,39 @@
+@import "../variables";
+@import "breakpoints.mixins";
+
+@mixin landing-typography() {
+  p {
+    font-size: 19px;
+  }
+
+  h1 {
+    font-size: 55px;
+    @include respond-to('small') {
+      line-height: 1.3em;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.6em;
+  }
+
+  h3 {
+    font-size: 23px;
+  }
+
+  .highlighted-btn {
+    box-shadow: 0 0 0 2px $accent;
+    border-radius: 2 * $theme-unit !important;
+    width: 100%;
+    margin-top: $panel-gap;
+    margin-bottom: $panel-gap;
+    padding-left: 2 * $panel-gap !important;
+    padding-right: 2 * $panel-gap !important;
+
+    @include respond-to('landing-small') {
+      width: auto;
+      min-width: 300px !important;
+    }
+  }
+}

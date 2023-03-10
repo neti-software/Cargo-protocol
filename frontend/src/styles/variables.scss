@@ -1,0 +1,41 @@
+$theme-unit: 8px;
+$body-bg: #1f1f1f;
+
+$primary: #7001af;
+$primary-light: #fff;
+$primary-dark: #6a01a8;
+$secondary: #9302db;
+$accent: #CBCDDA;
+$error: #F46060;
+$warning: #eebb4d;
+$info: #B5DEFF;
+$success: #47bc6c;
+$success-light: #C6F9D6;
+$text-color: #f9fafa;
+$sub-text-color: #b9bfc6;
+$border: thin solid #D5D6DF;
+$border-light: thin solid #7a7a7a;
+$border-radius: 2 * $theme-unit;
+$panel-gap: $theme-unit  * 3;
+$fixed-offset: $panel-gap  * 4;
+
+$font-lg: 20px;
+$font-lg-line: 26px;
+$font-regular: $theme-unit * 2;
+$font-regular-line: 19px;
+$font-md: 16px;
+$font-sm: 14px;
+$font-sm-line: $theme-unit * 2;
+$font-xs: 10px;
+$snackbar-content-font-size: $theme-unit * 2;
+
+$aggregator-table-columns-2: 1fr 1fr;
+$aggregator-table-columns-3: 1fr 1fr 1fr;
+$aggregator-table-columns-large: 2.5fr 1fr 2fr 1fr 1fr;
+
+$aggregator-table-columns-portfolio: 2.5fr 1fr 2fr 1fr;
+$aggregator-table-columns-portfolio-phone: 0.3fr 1fr;
+
+$tooltip-font-size: 12px;
+
+$celo-table-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;

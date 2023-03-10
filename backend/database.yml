@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+ database:
+   image: mariadb
+   restart: "no"
+   ports:
+   - "3306:3306"
+   volumes:
+   - ./mysql-rebalancer/:/var/lib/mysql/
+   - ./custom.cnf:/etc/mysql/conf.d/custom.cnf
+   environment:
+     MYSQL_ROOT_PASSWORD: test
+     MYSQL_DATABASE: rebalancer
+     MYSQL_USER: rebalancer
+     MYSQL_PASSWORD: test

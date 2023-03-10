@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "strictNullChecks": false,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "incremental": true,
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@services/*": ["./services/*"],
+      "@database/*": ["./database/*"],
+      "@constant/*": ["./constant/*"],
+      "@shares/*": ["./shares/*"],
+      "@repositories/*": ["./repositories/*"],
+      "@/*": ["./*"]
+    },
+    "plugins": [{ "transform": "typescript-transform-paths" }]
+  }
+}
